@@ -9,16 +9,19 @@ jobs:
       contents: write
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Install gdown
+        run: pip install gdown
 
       - name: Download Universal APK
-        run: wget -q -O VOID-v9.13.26_universal_release.apk 'https://docs.google.com/uc?export=download&id=11Or4J855752rY_gqSCfQU2VzPm1S0Cq3'
+        run: gdown "11Or4J855752rY_gqSCfQU2VzPm1S0Cq3" -O VOID-v9.13.26_universal_release.apk
 
       - name: Download arm64-v8a APK
-        run: wget -q -O VOID-v9.13.26_arm64-v8a_release.apk 'https://docs.google.com/uc?export=download&id=1xZ7zi3yiq-p53ayqTnJTQZHFCxZEHRqn'
+        run: gdown "1xZ7zi3yiq-p53ayqTnJTQZHFCxZEHRqn" -O VOID-v9.13.26_arm64-v8a_release.apk
 
       - name: Download armeabi-v7a APK
-        run: wget -q -O VOID-v9.13.26_armeabi-v7a_release.apk 'https://docs.google.com/uc?export=download&id=1vqiigb1RCaChVa0hBcNU1vQ8OZna2ory'
+        run: gdown "1vqiigb1RCaChVa0hBcNU1vQ8OZna2ory" -O VOID-v9.13.26_armeabi-v7a_release.apk
 
       - name: Upload to Draft Release
         env:
