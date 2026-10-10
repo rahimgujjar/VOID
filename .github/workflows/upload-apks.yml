@@ -22,6 +22,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # UPDATE THE VERSION TAG HERE FOR FUTURE RELEASES (e.g., v9.20.26)
+          # UPDATE THE VERSION TAG HERE FOR FUTURE RELEASES (e.g., v10.10.26)
           # The *.apk wildcard tells the CLI to grab every APK inside the folder automatically
-          gh release upload v9.20.26 release_apks/*.apk --clobber
+          gh release upload v10.10.26 release_apks/*.apk --clobber
