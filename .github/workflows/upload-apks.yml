@@ -24,4 +24,4 @@ jobs:
         run: |
           # UPDATE THE VERSION TAG HERE FOR FUTURE RELEASES (e.g., v10.10.26)
           # The *.apk wildcard tells the CLI to grab every APK inside the folder automatically
-          gh release upload v10.10.26 release_apks/*.apk --clobber
+          gh release upload v10.11.26 release_apks/*.apk --clobber
